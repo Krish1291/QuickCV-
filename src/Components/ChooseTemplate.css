@@ -1,0 +1,63 @@
+.mainContent {
+  display: flex;
+  justify-content: center;
+}
+.temp1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+img {
+  height: 300px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px 3px #2563eb;
+  margin: 30px;
+  cursor: pointer;
+}
+img:hover {
+  height: 350px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px 13px #2563eb;
+
+  cursor: pointer;
+}
+.img {
+  height: 300px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 15px;
+  box-shadow: 2px 2px 20px 3px #2563eb;
+  margin: 30px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.mainContent {
+  animation: fadeIn 2s ease-in-out;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.tt {
+  animation: fadeUp 2s ease-in-out;
+}

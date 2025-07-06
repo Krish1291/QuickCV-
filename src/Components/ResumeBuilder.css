@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Heading {
+  padding: 20px;
+  margin-bottom: 50px;
+}
+label {
+  margin-right: 470px;
+  font-weight: bold;
+}
+#em {
+  margin-right: 510px;
+}
+#skill {
+  margin-right: 510px;
+}
+#ach {
+  margin-right: 450px;
+}
+
+.container {
+  background-color: rgb(249, 249, 249);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 600px;
+  border-radius: 20px;
+  margin: 0 auto 100px auto;
+}
+.heading {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+input {
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.container-fade-in {
+  animation: fadeIn 2s ease-in forwards;
+}
