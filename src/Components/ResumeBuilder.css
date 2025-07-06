@@ -43,6 +43,7 @@ label {
 }
 input {
   width: 100%;
+  color: black;
 }
 
 @keyframes fadeIn {
@@ -56,4 +57,7 @@ input {
 
 .container-fade-in {
   animation: fadeIn 2s ease-in forwards;
+}
+textarea {
+  color: black;
 }

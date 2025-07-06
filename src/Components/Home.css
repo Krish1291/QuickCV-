@@ -1,13 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-  background-image: url("./background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  min-height: 100vh;
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
+body {
+  background: linear-gradient(50deg, #3cceff, #fefefe, #c8e9f5, #859afe);
+  background-size: 300% 300;
+  animation: gradientShift 10s ease infinite;
+
+  min-height: 100vh;
+  margin: 0;
+  color: #2563eb;
+}
+
 @keyframes fade-in {
   from {
     opacity: 0;

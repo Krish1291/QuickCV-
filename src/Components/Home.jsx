@@ -10,12 +10,7 @@ const Home = () => {
   };
 
   return (
-    <div
-      className=" font-bold text-center min-h-screen bg-cover bg-center px-6 py-20 flex flex-col justify-center items-center"
-      style={{
-        backgroundImage: `url("/path/to/your/background-image.jpg")`,
-      }}
-    >
+    <div className=" font-bold text-center min-h-screen bg-cover bg-center px-6 py-20 flex flex-col justify-center items-center">
       <p className="text-6xl md:text-7xl text-blue-600 mb-8 animate-fade-in-down">
         Create Your Resume in Just a Few Clicks
       </p>
