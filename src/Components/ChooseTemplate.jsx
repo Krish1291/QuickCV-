@@ -50,6 +50,16 @@ const ChooseTemplate = () => {
             Template 3
           </button>
         </div>
+        <div className="temp3">
+          <img src="Template4.PNG" alt="Template1"></img>
+          <button
+            className="rder p-4 m-4 rounded bg-blue-500 text-white hover:bg-blue-600"
+            onClick={() => handleSelectTemplate("template4")}
+          >
+            {" "}
+            Template 4
+          </button>
+        </div>
       </div>
     </div>
   );

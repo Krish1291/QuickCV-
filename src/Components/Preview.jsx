@@ -3,6 +3,7 @@ import Template1 from "./Template1";
 import { useEffect } from "react";
 import Template2 from "./Template2";
 import Template3 from "./Template3";
+import Template4 from "./Template4";
 const Preview = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -31,6 +32,7 @@ const Preview = () => {
       {selectedTemplate === "template1" && <Template1 data={data} />}
       {selectedTemplate === "template2" && <Template2 data={data} />}
       {selectedTemplate == "template3" && <Template3 data={data} />}
+      {selectedTemplate == "template4" && <Template4 data={data} />}
     </div>
   );
 };
