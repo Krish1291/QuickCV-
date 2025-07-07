@@ -1,0 +1,73 @@
+.template3 {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 50px;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.content3 {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-bottom: 2px solid rgb(104, 97, 97);
+}
+.content3 h1 {
+  font-size: 50px;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  font-weight: bolder;
+  border-bottom: 2px solid black;
+  border-radius: 5px;
+}
+.contact p {
+  color: black;
+  padding: 3px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  margin-left: 200px;
+}
+#heading {
+  font-size: 24px;
+  font-weight: bolder;
+  color: black;
+}
+.info {
+  display: flex;
+  padding: 20px;
+
+  border-bottom: 2px solid black;
+}
+.info #about {
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin-left: 310px;
+}
+.info #expe {
+  margin-left: 262px;
+  color: black;
+}
+.info #edu {
+  margin-left: 262px;
+  color: black;
+}
+.info #ski {
+  margin-left: 325px;
+  color: black;
+}
+.info #achie {
+  margin-left: 230px;
+  color: black;
+}
+.info #hobb {
+  margin-left: 300px;
+  color: black;
+}

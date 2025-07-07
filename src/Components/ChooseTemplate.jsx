@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "./ChooseTemplate.css";
 const ChooseTemplate = () => {
   const location = useLocation();
-  const formData = location.state; // resume form data from ResumeBuilder
+  const formData = location.state;
   const navigate = useNavigate();
 
   const handleSelectTemplate = (templateName) => {
@@ -38,6 +38,16 @@ const ChooseTemplate = () => {
             onClick={() => handleSelectTemplate("template2")}
           >
             Template 2
+          </button>
+        </div>
+        <div className="temp3">
+          <img src="Template3.PNG" alt="Template1"></img>
+          <button
+            className="rder p-4 m-4 rounded bg-blue-500 text-white hover:bg-blue-600"
+            onClick={() => handleSelectTemplate("template3")}
+          >
+            {" "}
+            Template 3
           </button>
         </div>
       </div>

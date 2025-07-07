@@ -4,7 +4,7 @@ import "./App.css";
 import ResumeBuilder from "./Components/ResumeBuilder";
 import ChooseTemplate from "./Components/ChooseTemplate";
 import Preview from "./Components/Preview";
-import Template1 from "./Components/Template1";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
