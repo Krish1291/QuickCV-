@@ -41,3 +41,52 @@ hr {
 .bdy {
   padding: 40px;
 }
+@media (max-width: 600px) {
+  .content {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+  .content2 {
+    padding: 15px;
+    text-align: center;
+  }
+  .content h1 {
+    font-size: 28px;
+  }
+  .content h2 {
+    font-size: 28px;
+  }
+  #cntct {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  .content h2 {
+    font-size: 18px;
+  }
+
+  .bdy {
+    padding: 20px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  .download-btn {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    margin: 20px auto;
+    display: block;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .download-btn:hover {
+    background-color: #1e40af;
+  }
+}

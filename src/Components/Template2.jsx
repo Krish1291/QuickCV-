@@ -11,7 +11,7 @@ const Template2 = ({ data }) => {
       .set({
         filename: `${data.name}_resumee.pdf`,
         html2canvas: { scale: 2 },
-        jsPDF: { format: [300, 400], orientation: "portrait" }, // bigger page
+        jsPDF: { format: [300, 400], orientation: "portrait" },
       })
       .from(element)
       .save();

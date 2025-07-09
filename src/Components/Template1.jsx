@@ -11,7 +11,7 @@ const Template1 = ({ data }) => {
       .set({
         filename: `${data.name}_resume.pdf`,
         html2canvas: { scale: 2 },
-        jsPDF: { format: [300, 400], orientation: "portrait" }, // bigger page
+        jsPDF: { format: [300, 400], orientation: "portrait" },
       })
       .from(element)
       .save();
@@ -30,9 +30,7 @@ const Template1 = ({ data }) => {
         </header>
 
         <main className="template-main">
-          {/* Left Column */}
           <div>
-            {/* Education */}
             <section className="template-section">
               <h2>Education</h2>
               <ul>
@@ -45,7 +43,6 @@ const Template1 = ({ data }) => {
               </ul>
             </section>
 
-            {/* Skills */}
             <section className="template-section">
               <h2>Skills</h2>
               <ul>
@@ -59,9 +56,7 @@ const Template1 = ({ data }) => {
             </section>
           </div>
 
-          {/* Right Column */}
           <div>
-            {/* Experience */}
             <section className="template-section">
               <h2>Experience</h2>
               <ul>
@@ -74,7 +69,6 @@ const Template1 = ({ data }) => {
               </ul>
             </section>
 
-            {/* Projects */}
             <section className="template-section">
               <h2>Projects</h2>
               <ul>
@@ -87,7 +81,6 @@ const Template1 = ({ data }) => {
               </ul>
             </section>
 
-            {/* Hobbies */}
             <section className="template-section">
               <h2>Hobbies</h2>
               <ul>
@@ -100,7 +93,6 @@ const Template1 = ({ data }) => {
               </ul>
             </section>
 
-            {/* Achievements */}
             <section className="template-section">
               <h2>Achievements</h2>
               <ul>

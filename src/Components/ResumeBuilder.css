@@ -63,3 +63,41 @@ input {
 textarea {
   color: black;
 }
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 10px;
+    flex-direction: column;
+  }
+  label,
+  #em,
+  #skill,
+  #ach {
+    margin-right: 0;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+  }
+
+  .Heading {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  button {
+    width: 60%;
+    padding: 12px;
+  }
+}

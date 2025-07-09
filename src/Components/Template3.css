@@ -71,3 +71,84 @@
   margin-left: 300px;
   color: black;
 }
+
+@media (max-width: 600px) {
+  .template3 {
+    width: 100%;
+
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .content3 {
+    text-align: left;
+  }
+  .content3 h1 {
+    font-size: 28px;
+    padding: 5px;
+    text-align: left;
+  }
+  .contact {
+    font-size: 16px;
+    text-align: left;
+  }
+  #heading {
+    font-size: 18px;
+  }
+  .info {
+    padding: 10px 0;
+  }
+  .download-btn {
+    width: 90%;
+    margin: 20px auto;
+    padding: 12px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .contact p {
+    color: black;
+    padding: 3px;
+    padding-bottom: 5px;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+
+  .download-btn:hover {
+    background-color: #333;
+  }
+  .info {
+    display: flex;
+    padding: 20px;
+
+    border-bottom: 2px solid black;
+  }
+  .info #about {
+    justify-content: center;
+    margin-left: 70px;
+  }
+  .info #expe {
+    margin-left: 60px;
+    color: black;
+  }
+  .info #edu {
+    margin-left: 60px;
+    color: black;
+  }
+  .info #ski {
+    margin-left: 100px;
+    color: black;
+  }
+  .info #achie {
+    margin-left: 30px;
+    color: black;
+  }
+  .info #hobb {
+    margin-left: 79px;
+    color: black;
+  }
+}
