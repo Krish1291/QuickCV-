@@ -1,0 +1,76 @@
+.register {
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  box-shadow: 2px 2px 8px 2px #2563eb;
+
+  border-radius: 12px;
+  margin-left: 20%;
+  margin-top: 6%;
+  height: 500px;
+  width: 65%;
+}
+#loginImg {
+  width: 400px;
+  height: auto;
+  box-shadow: 1px 1px 8px 1px #2563eb;
+  object-fit: contain;
+  margin-right: 90px;
+  border-radius: none;
+}
+#loginImg:hover {
+  border-radius: none;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.register h1 {
+  color: rgb(113, 12, 175);
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.register input {
+  padding: 12px 15px;
+  border: 2px solid rgb(113, 12, 175);
+  border-radius: 25px;
+  font-size: 16px;
+  width: 240px;
+  outline: none;
+}
+
+.register button {
+  width: 140px;
+  padding: 12px;
+  background-color: rgb(113, 12, 175);
+  color: white;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.register button:hover {
+  background-color: rgb(181, 41, 232);
+}
+
+.register p {
+  text-align: center;
+  color: black;
+}
+
+.register span {
+  font-size: 18px;
+  color: rgb(181, 41, 232);
+  cursor: pointer;
+}

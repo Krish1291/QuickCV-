@@ -20,7 +20,7 @@ const ChooseTemplate = () => {
         Choose Your Template
       </h1>
 
-      <div className="mainContent">
+      <div className="mainContent1">
         <div className="temp1">
           <img src="Template.PNG" alt="Template1"></img>
           <button
