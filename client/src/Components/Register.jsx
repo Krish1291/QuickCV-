@@ -1,58 +1,59 @@
-import "./Register.css"; // same css use kar rahe hai
+// src/components/Register.jsx
+import "./Register.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../config";
 
 const Register = () => {
   const navigate = useNavigate();
-  const [name, setName] = useState(""); // ✅ new field
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
   useEffect(() => {
-    AOS.init({
-      duration: 2000,
-      once: true,
-    });
+    AOS.init({ duration: 2000, once: true });
   }, []);
-
-  const handleRegister = () => {
-    navigate("/login");
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
 
     try {
       const res = await fetch(
-        "https://quickcv-backend-yrh8.onrender.com/api/auth/register",
+        `${import.meta.env.VITE_BACKEND_LINK}/api/auth/register`,
         {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          credentials: "include", 
+          headers: { "Content-Type": "application/json" },
+          credentials: "include",
           body: JSON.stringify({ name, email, password }),
         }
       );
 
       const data = await res.json();
+
       if (res.ok) {
         console.log(data.message);
-        navigate("/login"); 
+        navigate("/login"); // Redirect to login after registration
       } else {
-        alert(data.message);
+        setError(data.message || "Registration failed");
       }
     } catch (err) {
       console.error("Error:", err);
+      setError("Network error. Try again.");
     }
   };
 
   return (
     <div className="register" data-aos="flip-left">
-      <img src="register.png" id="loginImg" alt="Login" data-aos="flip-right" />
-
+      <img
+        src="register.png"
+        id="loginImg"
+        alt="Register"
+        data-aos="flip-right"
+      />
       <form onSubmit={handleSubmit} data-aos="zoom-in">
         <h1>Create Account</h1>
         <input
@@ -62,7 +63,6 @@ const Register = () => {
           onChange={(e) => setName(e.target.value)}
           required
         />
-
         <input
           type="email"
           placeholder="Enter your Email"
@@ -70,7 +70,6 @@ const Register = () => {
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-
         <input
           type="password"
           placeholder="Enter your Password"
@@ -78,11 +77,8 @@ const Register = () => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-
-        <button type="submit" onClick={handleRegister}>
-          Register
-        </button>
-
+        <button type="submit">Register</button>
+        {error && <p className="error">{error}</p>}
         <p>
           Already have an account?{" "}
           <span
