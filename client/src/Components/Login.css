@@ -53,7 +53,7 @@
 .mainContent input {
   padding: 12px 15px;
   border: 1px solid #ccc;
-  border: 2px solid  rgb(113, 12, 175);
+  border: 2px solid rgb(113, 12, 175);
   border-radius: 25px;
   font-size: 16px;
 }
@@ -75,4 +75,43 @@ span {
   font-size: 20px;
 
   color: rgb(113, 12, 175);
+}
+@media (max-width: 768px) {
+  .login {
+    flex-direction: column;
+    width: 90%;
+    backdrop-filter: blur(100px);
+    background-color: rgba(245, 245, 245, 0.2);
+    margin: 20px auto;
+    margin-top: 140px;
+    height: auto;
+    padding: 20px;
+  }
+
+  #loginImg {
+    display: none;
+  }
+
+  .sign {
+    font-size: 32px;
+  }
+
+  .mainContent form {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sign {
+    font-size: 26px;
+  }
+
+  .mainContent input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #submit {
+    width: 100%;
+  }
 }

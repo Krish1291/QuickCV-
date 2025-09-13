@@ -1,5 +1,5 @@
 .register {
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -73,4 +73,55 @@
   font-size: 18px;
   color: rgb(181, 41, 232);
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .register {
+    flex-direction: column;
+    width: 90%;
+
+    margin: 20px auto;
+    margin-top: 130px;
+    height: auto;
+    padding: 20px;
+  }
+
+  #loginImg {
+    display: none;
+  }
+
+  .register h1 {
+    font-size: 28px;
+  }
+
+  .register input {
+    width: 100%;
+  }
+
+  .register button {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .register {
+    padding: 15px;
+  }
+
+  .register h1 {
+    font-size: 24px;
+  }
+
+  .register input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .register button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .register span {
+    font-size: 16px;
+  }
 }
