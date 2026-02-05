@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import path from "path";
+
 import cookieParser from "cookie-parser";
 import authRoutes from "./routes/auth.js";
 
@@ -41,16 +41,8 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB error:", err));
 
-// 🔹 SERVE FRONTEND (MUST BE BEFORE listen)
-const __dirname = path.resolve();
 
-app.use(express.static(path.join(__dirname, "client/dist")));
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/dist", "index.html"));
-});
-
-// error handler
 app.use((err, req, res, next) => {
   console.error("Server Error:", err.message);
   res.status(500).json({ error: err.message });
