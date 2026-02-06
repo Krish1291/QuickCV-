@@ -1,10 +1,8 @@
-// src/components/Login.jsx
 import "./Login.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { API_URL } from "../config";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -21,15 +19,12 @@ const Login = () => {
     setError("");
 
     try {
-      const res = await fetch(
-        `${import.meta.env.VITE_BACKEND_LINK}/api/auth/login`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          credentials: "include",
-          body: JSON.stringify({ email, password }),
-        }
-      );
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        credentials: "include",
+        body: JSON.stringify({ email, password }),
+      });
 
       const data = await res.json();
 
@@ -49,9 +44,7 @@ const Login = () => {
     <div className="login" data-aos="flip-right">
       <img src="login1.png" id="loginImg" alt="Login" data-aos="flip-left" />
       <div className="mainContent">
-        <h1 className="sign" data-aos="zoom-in">
-          Sign In
-        </h1>
+        <h1 className="sign" data-aos="zoom-in">Sign In</h1>
         <form onSubmit={handleSubmit}>
           <input
             type="email"
@@ -67,16 +60,11 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <button type="submit" id="submit">
-            Sign In
-          </button>
+          <button type="submit" id="submit">Sign In</button>
           {error && <p className="error">{error}</p>}
           <p>
             New here?{" "}
-            <span
-              onClick={() => navigate("/register")}
-              style={{ cursor: "pointer", color: "#4f8ef7" }}
-            >
+            <span onClick={() => navigate("/register")} style={{ cursor: "pointer", color: "#4f8ef7" }}>
               Create an Account
             </span>
           </p>
